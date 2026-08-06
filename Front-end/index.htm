@@ -9,19 +9,34 @@
 <body>
     <div class="home">
         <h1>Deseja Criar um novo Cronograma?</h1>
-        <button onclick="PerguntarCronograma()" class="criarCronograma">Criar Cronograma</button>
+        <button onclick="PerguntarCronograma()" class="criarCronograma">+ Nova Tarefa</button>
     </div>
 
-    <div class="PerguntasTipoCronograma">
-        <h1>Qual vai ser o tipo de cronograma?</h1>
-
-        <div class="cronogramas">
-            <button class="button_tipos"><img src="../assets/icons8-alvo-50 (1).png" alt="Icone Alvo">Organizar Contas</button>
+    <div class="modal" id="modal">
+        <div class="modal-head">
+            <p>Nova Tarefa</p>
+            <button>X</button>
         </div>
-
-        <div class="OrganizarComp">
-            <button class="button_tipos"><img src="../assets/icons8-bloco-de-anotações-48.png">Organizar Compromissos</button>
+        <div class="questions">
+            <div class="quest_1">
+                <label>O que você precisa fazer?</label>
+                <input type="text">
+            </div>
+            <div class="quest_2">
+                <label>Qual é o tipo dessa tarefa?</label>
+                <select name="" id="select_task">
+                    <option value="" disabled selected>Selecione um tipo de categoria</option>
+                    <option value="Compromisso">Compromissos</option>
+                    <option value="Contas">Contas / Finanças</option>
+                    <option value="TarefasGerais"> Tarefa Geral</option>
+                </select>
+            </div>
+            <div class="buttons_task">
+                <button class="cancel">Cancelar</button>
+                <button class="advanced">Avançar ></button>
+            </div>
         </div>
     </div>
 </body>
+<script src="..//Back-end/script.js"></script>
 </html>
