@@ -42,7 +42,7 @@ button:hover{
 /* ================ Perguntando Qual Tarefa ============= */
 
 .modal{
-    display: none !important;
+    display: none;
     flex-direction: column;
     background-color: rgb(18, 83, 9);
     height: 400px;
@@ -51,7 +51,7 @@ button:hover{
     right: 760px;
     position: absolute;
     align-items: flex-start;
-
+    margin-top: 100px;
 }
 .modal-head{
     display: flex;
@@ -170,10 +170,94 @@ button:hover{
     color: white;
     font-size: 14px;
     font-weight: bold;
-    transform: scaleX(1);
 }
 .cancel:hover{
     transition: .3s ease;
     background-color: rgb(197, 1, 1);
     box-shadow: 1px 3px 10px rgb(187, 1, 1);
+
+}
+/* AREA DE FINANÇAS */
+.financa{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(18, 83, 9);
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    position: absolute;
+    align-items: flex-start;
+    margin-top: 0px;
+    left: 0px;
+}
+
+.head_financa p{
+    font-size: 18px;
+    padding-left: 9px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    color: white;
+}
+.quest-financa label{
+    font-size: 18px;
+    padding-left: 9px;
+    color: white;
+    font-weight: bold;
+}
+.quest-financa input{
+    height: 40px;
+    width: 90%;
+    margin-left: 9px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    padding-left: 7px;
+    font-weight: bold;
+}
+.quest-financa input:focus{
+    outline: none;
+}
+
+
+/* KEYFRAMES */
+
+@keyframes go-front{
+    from{
+        transform: translateY(700px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes move-home {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-500px);
+    }
+}
+
+@keyframes go-back{
+    from{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(700px);
+        opacity: 0;
+    }
+}
+
+@keyframes move-home-reverse {
+    from{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }

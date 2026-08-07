@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="home">
+    <div class="home" id="home">
         <h1>Deseja Criar um novo Cronograma?</h1>
-        <button onclick="PerguntarCronograma()" class="criarCronograma">+ Nova Tarefa</button>
+        <button id="PerguntarCronograma" class="criarCronograma">+ Nova Tarefa</button>
     </div>
 
     <div class="modal" id="modal">
         <div class="modal-head">
             <p>Nova Tarefa</p>
-            <button>X</button>
+            <button onclick="CloseTask()">X</button>
         </div>
         <div class="questions">
             <div class="quest_1">
@@ -32,11 +32,28 @@
                 </select>
             </div>
             <div class="buttons_task">
-                <button class="cancel">Cancelar</button>
-                <button class="advanced">Avançar ></button>
+                <button class="cancel" onclick="cancelAction()">Cancelar</button>
+                <button class="advanced" onclick="AvancedNext()">Avançar ></button>
+            </div>
+        </div>
+
+
+        <!-- ABA DE FINANÇAS -->
+         
+        <div class="financa">
+            <div class="head_financa">
+                <p>Planejamento Finanças - Passo 1 de 2</p>
+            </div>
+            <div class="quest-financa">
+                <label>Qual é o seu Salário / Renda Total do Mês?</label>
+                <input type="number" placeholder="R$ 0,00">
+            </div>
+            <div class="buttons_task">
+                <button class="cancel" onclick="cancelAction()">Cancelar</button>
+                <button class="advanced" onclick="AvancedNext()">Avançar ></button>
             </div>
         </div>
     </div>
 </body>
-<script src="..//Back-end/script.js"></script>
+<script src="../Back-end/script.js" defer></script>
 </html>
